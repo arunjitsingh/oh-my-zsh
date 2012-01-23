@@ -1,3 +1,12 @@
+_smiley () {
+  local prevret=$?
+  if (( $prevret )); then
+    echo -n "%{$bg[red]%}%{$fg[yellow]%} $prevret %{$reset_color%}"
+  else
+    echo -n "%{$fg[green]%}☻%{$reset_color%}"
+  fi
+}
+
 _git_toplevel () {
   echo -n "$(basename $(git rev-parse --show-toplevel))"
 }
@@ -14,5 +23,5 @@ _git_prompt () {
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 
-PROMPT=' $(_git_prompt)%{$fg[blue]%}→ %{$reset_color%}'
-RPROMPT='%{$fg[gray]%}%~'
+PROMPT=' $(_smiley) $(_git_prompt)%{$fg[blue]%}→ %{$reset_color%}'
+RPROMPT='%{$fg[yellow]%}%~%{$reset_color%}'
