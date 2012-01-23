@@ -1,8 +1,12 @@
+_git_toplevel () {
+  echo -n "$(basename $(git rev-parse --show-toplevel))"
+}
+
 _git_prompt () {
   if [[ "$(is_git_dirty)" == "dirty" ]]; then
-    ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}"
+    ZSH_THEME_GIT_PROMPT_PREFIX="$(_git_toplevel) %{$fg[red]%}"
   else
-    ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
+    ZSH_THEME_GIT_PROMPT_PREFIX="$(_git_toplevel) %{$fg[green]%}"
   fi
   echo "$(git_prompt_info)"
 }
