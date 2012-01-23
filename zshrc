@@ -58,3 +58,4 @@ export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/X11/bin"
 
 source ~/dotfiles/env/apps
 source ~/dotfiles/env/aliases
+source ~/dotfiles/env/git-completion

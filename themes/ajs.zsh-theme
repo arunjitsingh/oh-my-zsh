@@ -8,7 +8,7 @@ _smiley () {
 }
 
 _git_toplevel () {
-  echo -n "$(basename $(git rev-parse --show-toplevel))"
+  echo -n "$(basename $(git rev-parse --show-toplevel 2>/dev/null) 2>/dev/null)"
 }
 
 _git_prompt () {
