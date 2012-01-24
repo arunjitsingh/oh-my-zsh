@@ -20,8 +20,12 @@ _git_prompt () {
   echo "$(git_prompt_info)"
 }
 
+_change_title () {
+  print -Pn "\033]0;%c\007"
+}
+
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 
-PROMPT=' $(_smiley) $(_git_prompt)%{$fg[blue]%}→ %{$reset_color%}'
+PROMPT='$(_change_title) $(_smiley) $(_git_prompt)%{$fg[blue]%}→ %{$reset_color%}'
 RPROMPT='%{$fg[yellow]%}%~%{$reset_color%}'
