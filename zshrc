@@ -35,6 +35,8 @@ plugins=(git osx jake-node npm brew compleat)
 
 setopt EXTENDED_GLOB
 
+setopt prompt_subst
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
