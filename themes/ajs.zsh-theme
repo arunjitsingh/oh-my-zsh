@@ -1,9 +1,9 @@
 _smiley () {
   local prevret=$?
   if (( $prevret )); then
-    echo -n "%{$bg[red]%}%{$fg[yellow]%} $prevret %{$reset_color%}"
+    echo -n "%{$bg[red]%}%{$fg_bold[yellow]%} $prevret %{$reset_color%}"
   else
-    echo -n "%{$fg[green]%}☻%{$reset_color%}"
+    echo -n "%{$fg_bold[green]%}☻%{$reset_color%}"
   fi
 }
 
@@ -12,12 +12,30 @@ _git_toplevel () {
 }
 
 _git_prompt () {
-  if [[ "$(is_git_dirty)" == "dirty" ]]; then
-    ZSH_THEME_GIT_PROMPT_PREFIX="$(_git_toplevel) %{$fg[red]%}"
+  if [[ "$(is_git)" != "" ]]; then
+    local state=""
+    if [[ "$(is_git_dirty)" == "dirty" ]]; then
+      state="%{$fg[red]%}"
+    else
+      state="%{$fg[green]%}"
+    fi
+    echo "$state$(current_branch)%{$reset_color%} "
   else
-    ZSH_THEME_GIT_PROMPT_PREFIX="$(_git_toplevel) %{$fg[green]%}"
+    echo ""
   fi
-  echo "$(git_prompt_info)"
+}
+
+_cwd_fix () {
+  local cwd=$(pwd)
+
+  local home_src="$HOME/Developer/src"
+  local home_src_out="~src /";
+  cwd="${cwd/#$home_src/$home_src_out}"
+  home_src="$HOME/src"
+  cwd="${cwd/#$home_src/$home_src_out}"
+
+  cwd="${cwd/#$HOME/~}"
+  echo $cwd
 }
 
 _change_title () {
@@ -27,5 +45,5 @@ _change_title () {
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 
-PROMPT='$(_change_title) $(_smiley) $(_git_prompt)%{$fg[blue]%}→ %{$reset_color%}'
-RPROMPT='%{$fg[yellow]%}%~%{$reset_color%}'
+PROMPT=' %{$fg_bold[yellow]%}$(_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}→ %{$reset_color%}'
+RPROMPT='$(_smiley)'
