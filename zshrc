@@ -35,29 +35,7 @@ plugins=(git osx jake-node npm brew compleat)
 
 setopt EXTENDED_GLOB
 
-setopt prompt_subst
-
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-## BASE ##
-
-export DEV_ROOT="~/Developer"
-export DEV_SRC="~/Developer/src"
-export DEV_LIB="~/Developer/lib"
-export DEV_BIN="~/Developer/bin"
-
-export SYM_SRC="~/src"
-
-export WEBROOT="/Library/WebServer/Documents/"
-
-# bind '"[A":history-search-backward'
-# bind '"[B":history-search-forward'
-
-#### PATH ####
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/X11/bin"
-#### #### ####
-
-source ~/dotfiles/env/apps
-source ~/dotfiles/env/aliases
-source ~/dotfiles/env/git-completion
+# in custom/ajs.zsh
