@@ -1,0 +1,73 @@
+#! /usr/bin/env bash
+#
+# Copyright (C) 2011 Arunjit Singh <http://arunjitsingh.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+#echo "sourcing prog"
+
+export NSBIN="/Users/arunjitsingh/Developer/CollegeWork/Semester8/NS/bin"
+export PATH="${PATH}:/Users/arunjitsingh/Developer/bin:${NSBIN}"
+
+# Make and change to a dir
+function mdcd {
+    local dir=$1
+    if [[ ! "$dir" ]]; then
+        echo "$ERROR_STR need exactly one argument!$COLOR_NONE"
+        return 1
+    fi
+    mkdir -p "$dir"
+    if [[ -d "$dir" ]]; then
+        cd "$dir"
+    else
+        echo "$ERROR_STR couldn't create the directory$COLOR_NONE"
+        return 2
+    fi
+}
+
+# GCC, Makefile and TextMate #
+function matecc {
+    local fl=$1
+    local BIN=''
+    if [ -f "makefile" ]; then
+        if [ -d "bin" ]; then
+            BIN='bin/'
+        elif [ -d "~/bin" ]; then
+            BIN='~/bin/'
+        elif [ -d "~/Developer/bin" ]; then
+            BIN='~/Developer/bin/'
+        fi
+        if [ ! -f ${fl}.cc ]; then
+echo "
+${fl}: ${fl}.cc
+	\$(CC) \$(LIBS) ${fl}.cc -o ${BIN}${fl} && ${BIN}${fl}" >> makefile
+        fi
+    else
+        echo "makefile not found"
+    fi
+    touch ${fl}.cc
+    mate ${fl}.cc makefile
+}
+
+function gccstl {
+    local fl=$1
+    local ot="$(basename $fl .cc)"
+    echo "gcc -lstdc++ -o $ot $fl"
+    gcc -lstdc++ -o $ot $fl
+}
