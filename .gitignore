@@ -6,4 +6,4 @@ custom/*
 !custom/example.zsh
 cache
 *.swp
-!custom/ajs*
+!custom/arunjit*
