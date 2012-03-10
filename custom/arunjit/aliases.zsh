@@ -28,13 +28,10 @@ alias ll="ls -G1lhaF"
 
 alias duh="du -hd 1"
 
-alias rebash="source ~/.bash_profile"
 alias edit="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
 
 alias imac="ssh harmitsingh@10.0.1.179"
 alias amu="ssh root@10.0.1.18"
-alias ajsnet="ssh root@arunjitsingh.net"
-alias ajsgit="ssh git@arunjitsingh.net"
 
 alias killadobe='killall "AAM Updates Notifier"'
 
@@ -44,3 +41,7 @@ alias vim="vim -N"
 alias gvim="/Applications/Editors/MacVim.app/Contents/MacOS/Vim -g"
 
 alias rm="/usr/local/bin/safe-rm"
+
+### Application aliases ###
+alias openssl="$DEV_BIN/openssl"
+
