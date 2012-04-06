@@ -29,7 +29,7 @@ export PATH="$PATH:$DEV_BIN"
 #### #### ####
 
 ## INCLUDE FLAGS ##
-export AJ_CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC/cc"
+export AJ_CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC"
 ## LIBRARY FLAGS ##
 export AJ_LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
 
@@ -55,7 +55,7 @@ is_git_dirty() {
 }
 
 ajs_cwd_fix () {
-  local cwd=$(pwd)
+  local cwd="$(pwd)"
   regexp-replace cwd "$HOME/(Developer/)?src/" "~src //"
   cwd="${cwd/#$HOME/~}"
   echo $cwd

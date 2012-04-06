@@ -71,11 +71,12 @@ export GOHOSTOS="darwin"
 export GOHOSTARCH="amd64"
 export GOBIN="$GOOG/bin"
 
-# Setting PATH for Python 3.2
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin"
+
 # Setting PATH/PYTHONPATH for Python 2.7
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export PYTHONPATH="/Users/arunjitsingh/src/python:$BUILD_DEFS:/usr/local/google_appengine"
+# Setting PATH for Python 3.2
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin"
 
 # Perforce
 export P4NAME="ajsmbp"
@@ -95,3 +96,7 @@ export PATH="$PATH:$GOOG/bin:$GOOG/depot_tools"
 export NACL_SDK_ROOT="$DEV_SDK/nacl"
 export NACL_VERSION="pepper_16"
 alias nacl_init="$NACL_SDK_ROOT/$NACL_VERSION/project_templates/init_project.py"
+
+# Ruby
+export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin/"
+

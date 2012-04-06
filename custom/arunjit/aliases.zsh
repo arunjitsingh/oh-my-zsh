@@ -45,3 +45,12 @@ alias rm="/usr/local/bin/safe-rm"
 ### Application aliases ###
 alias openssl="$DEV_BIN/openssl"
 
+alias erb="/usr/local/bin/erb"
+alias gem="/usr/local/bin/gem"
+alias irb="/usr/local/bin/irb"
+alias rake="/usr/local/bin/rake"
+alias rdoc="/usr/local/bin/rdoc"
+alias ri="/usr/local/bin/ri"
+alias ruby="/usr/local/bin/ruby"
+alias testrb="/usr/local/bin/testrb"
+
