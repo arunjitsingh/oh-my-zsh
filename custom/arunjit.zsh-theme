@@ -34,6 +34,6 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$bg[red]$fg_bold[black]%} ⇜ %{$reset_color%}"
 ZSH_THEME_TERM_TITLE_IDLE='%c'
 ZSH_THEME_TERM_TAB_TITLE_IDLE='%c'
 
-PROMPT=' %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}→ %{$reset_color%}'
 #RPROMPT=' $(git_prompt_status) $(_smiley) ' # slows down the prompt
-RPROMPT=' $(_smiley) '
+RPROMPT='%{$fg_bold[white]%}$(date)%{$reset_color%} $(_smiley) '
+PROMPT=' %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}➜ %{$reset_color%}'
