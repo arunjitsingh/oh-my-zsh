@@ -26,6 +26,9 @@
 alias lg="ls -G1hl"
 alias ll="ls -G1lhaF"
 
+alias cc="clang"
+alias cxx="clang++"
+
 alias duh="du -hd 1"
 
 alias edit="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
