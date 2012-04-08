@@ -19,7 +19,8 @@ _git_prompt () {
     else
       state="%{$fg[green]%}"
     fi
-    echo "$state$(current_branch)%{$reset_color%} "
+    #echo "%{$fg_bold[black]%}git:$state$(current_branch)%{$fg_bold[black]%}@$(git rev-parse --short HEAD)%{$reset_color%} "
+    echo "%{$fg_bold[black]%}git:$state$(current_branch)%{$reset_color%} "
   else
     echo ""
   fi
@@ -35,5 +36,5 @@ ZSH_THEME_TERM_TITLE_IDLE='%c'
 ZSH_THEME_TERM_TAB_TITLE_IDLE='%c'
 
 #RPROMPT=' $(git_prompt_status) $(_smiley) ' # slows down the prompt
-RPROMPT='%{$fg_bold[white]%}$(date)%{$reset_color%} $(_smiley) '
-PROMPT=' %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}➜ %{$reset_color%}'
+export RPROMPT='$(_smiley) %{$fg_bold[white]%}%D{%B %d (%A) %T}%{$reset_color%} '
+export PROMPT=' %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}➜ %{$reset_color%}'
