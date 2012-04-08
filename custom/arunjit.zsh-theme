@@ -37,4 +37,5 @@ ZSH_THEME_TERM_TAB_TITLE_IDLE='%c'
 
 #RPROMPT=' $(git_prompt_status) $(_smiley) ' # slows down the prompt
 export RPROMPT='$(_smiley) %{$fg_bold[white]%}%D{%B %d (%A) %T}%{$reset_color%} '
-export PROMPT=' %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}➜ %{$reset_color%}'
+export PROMPT=' %{$fg_bold[black]%}%? #%! %n@%m:%~ %#
+ %{$fg_bold[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg_bold[blue]%}➜ %{$reset_color%}'
