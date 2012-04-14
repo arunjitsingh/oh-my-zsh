@@ -1,3 +1,9 @@
+#!/bin/zsh
+# Copyright 2012 Arunjit Singh. All Rights Reserved.
+# Author: Arunjit Singh <arunjit@me.com>
+
+# My Theme
+
 _smiley () {
   local prevret=$?
   if (( $prevret )); then

@@ -1,3 +1,9 @@
+#!/bin/zsh
+# Copyright 2012 Arunjit Singh. All Rights Reserved.
+# Author: Arunjit Singh <arunjit@me.com>
+
+# My Configuration
+
 setopt prompt_subst
 autoload -U regexp-replace
 
@@ -32,6 +38,9 @@ export PATH="$PATH:$DEV_BIN"
 export AJ_CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC"
 ## LIBRARY FLAGS ##
 export AJ_LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
+
+export CC=clang
+export CXX=clang++
 
 ### OTHER ###
 # git theming default: Variables for theming the git info prompt
