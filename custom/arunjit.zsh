@@ -17,7 +17,7 @@ export DEV_INC="$DEV_ROOT/include"
 export DEV_SDK="$DEV_ROOT/sdk"
 export DEV_DATA="$DEV_ROOT/data"
 
-export GOOG="$DEV_ROOT/google"
+export GOOG="/usr/local/google"
 
 export BUILD_DEFS="$DEV_SRC/build_defs"
 
