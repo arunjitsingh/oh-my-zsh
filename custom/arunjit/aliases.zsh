@@ -40,3 +40,5 @@ alias ri="/usr/local/bin/ri"
 alias ruby="/usr/local/bin/ruby"
 alias testrb="/usr/local/bin/testrb"
 
+alias stylus="stylus -I $DEV_SRC/stylus/ -u nib"
+
