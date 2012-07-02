@@ -51,8 +51,11 @@ export GOOS="darwin"
 export GOARCH="amd64"
 export GOHOSTOS="darwin"
 export GOHOSTARCH="amd64"
-export GOBIN="$GOROOT/bin"
-export PATH="$PATH:$GOBIN"
+#export GOBIN="$GOROOT/bin"
+export GOPATH="$DEV_SRC/go:$DEV_SRC/experimental/go"
+
+export PATH="$PATH:$GOROOT/bin"
+export PATH="$PATH:$DEV_SRC/go/bin:$DEV_SRC/experimental/go/bin"
 
 # Setting PATH/PYTHONPATH for Python 2.7
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
