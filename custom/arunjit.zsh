@@ -9,6 +9,8 @@ autoload -U regexp-replace
 
 ## BASE ##
 
+export EDITOR="subl"
+
 export DEV_ROOT="$HOME/Developer"
 export DEV_SRC="$DEV_ROOT/src"
 export DEV_LIB="$DEV_ROOT/lib"
@@ -18,6 +20,7 @@ export DEV_SDK="$DEV_ROOT/sdk"
 export DEV_DATA="$DEV_ROOT/data"
 
 export GOOG="/usr/local/google"
+export PYAE="$GOOG/appengine/python"
 
 export BUILD_DEFS="$DEV_SRC/build_defs"
 

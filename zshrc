@@ -7,10 +7,11 @@ ZSH=$HOME/Developer/src/ext/oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="arunjit"
 
-# Example aliases
+export EDITOR="subl"
+
 alias zshconfig="mate ~/.zshrc"
 alias rez="source ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzsh="$EDTIOR ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"

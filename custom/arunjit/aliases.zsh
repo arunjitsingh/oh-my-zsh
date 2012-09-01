@@ -29,7 +29,7 @@ alias gvim="/Applications/Editors/MacVim.app/Contents/MacOS/Vim -g"
 alias rm="/usr/local/bin/safe-rm"
 
 ### Application aliases ###
-alias openssl="$DEV_BIN/openssl"
+alias openssl="/usr/local/bin/openssl"
 
 alias erb="/usr/local/bin/erb"
 alias gem="/usr/local/bin/gem"
