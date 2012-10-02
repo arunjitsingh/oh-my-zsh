@@ -33,14 +33,14 @@ export WEBROOT="/Library/WebServer/Documents/"
 # bind '"[B":history-search-forward'
 
 #### PATH ####
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/X11/bin"
-export PATH="$PATH:$DEV_BIN"
+PATH="/usr/local/bin:/usr/X11/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="$DEV_BIN:$PATH"
 #### #### ####
 
 ## INCLUDE FLAGS ##
-export AJ_CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC"
+export CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC"
 ## LIBRARY FLAGS ##
-export AJ_LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
+export LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
 
 export CC=clang
 export CXX=clang++

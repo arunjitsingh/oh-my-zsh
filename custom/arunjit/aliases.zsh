@@ -42,3 +42,5 @@ alias testrb="/usr/local/bin/testrb"
 
 alias stylus="stylus -I $DEV_SRC/stylus/ -u nib"
 
+alias redis="redis-server /usr/local/conf/redis.conf"
+

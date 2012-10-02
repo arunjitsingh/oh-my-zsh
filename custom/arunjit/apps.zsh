@@ -54,15 +54,15 @@ export GOHOSTARCH="amd64"
 #export GOBIN="$GOROOT/bin"
 export GOPATH="$DEV_SRC/go:$DEV_SRC/experimental/go"
 
-export PATH="$PATH:$GOROOT/bin"
-export PATH="$PATH:$DEV_SRC/go/bin:$DEV_SRC/experimental/go/bin"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$DEV_SRC/go/bin:$DEV_SRC/experimental/go/bin:$PATH"
 
 # Setting PATH/PYTHONPATH for Python 2.7, 3.2
 export PYTHONPATH="$DEV_SRC/python:$DEV_SRC/ext/python:$BUILD_DEFS:$PYAE"
-# Setting PATH for Python 2.7
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 # Setting PATH for Python 3.2
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:$PATH"
+# Setting PATH for Python 2.7
+export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
 # # Perforce
 # export P4NAME="ajsmbp"
@@ -76,13 +76,9 @@ alias gjslh="gjslint --check_html"
 #alias gclc="java -jar /usr/local/bin/closure-compiler.jar"
 
 # Google tools and depot_tools
-export PATH="$PATH:$GOOG/bin:$GOOG/depot_tools"
+export PATH="$GOOG/bin:$GOOG/depot_tools:$PATH"
 
 # NACL
 export NACL_SDK_ROOT="$DEV_SDK/nacl"
 export NACL_VERSION="pepper_16"
 alias nacl_init="$NACL_SDK_ROOT/$NACL_VERSION/project_templates/init_project.py"
-
-# Ruby
-export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin/"
-
