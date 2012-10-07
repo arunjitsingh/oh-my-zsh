@@ -64,12 +64,6 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:$PATH"
 # Setting PATH for Python 2.7
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
-# # Perforce
-# export P4NAME="ajsmbp"
-# export P4ROOT="/usr/local/dbs/p4data"
-# export P4PORT=1666
-# export P4EDITOR="$EDITOR"
-
 # Closure Library/Compiler
 alias gjsl="gjslint"
 alias gjslh="gjslint --check_html"
