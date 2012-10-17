@@ -15,8 +15,6 @@ export DEV_ROOT="$HOME/Developer"
 export DEV_SRC="$DEV_ROOT/src"
 export DEV_LIB="$DEV_ROOT/lib"
 export DEV_BIN="$DEV_ROOT/bin"
-export DEV_INC="$DEV_ROOT/include"
-export DEV_SDK="$DEV_ROOT/sdk"
 export DEV_DATA="$DEV_ROOT/data"
 
 export GOOG="/usr/local/google"
@@ -38,7 +36,7 @@ export PATH="$DEV_BIN:$PATH"
 #### #### ####
 
 ## INCLUDE FLAGS ##
-export CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_INC -I$DEV_SRC"
+export CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_SRC"
 ## LIBRARY FLAGS ##
 export LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
 
