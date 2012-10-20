@@ -36,9 +36,9 @@ export PATH="$DEV_BIN:$PATH"
 #### #### ####
 
 ## INCLUDE FLAGS ##
-export CPPFLAGS="-I/include -I/usr/include -I/usr/local/include -I$DEV_SRC"
+export CPPFLAGS="-I$DEV_SRC -I/usr/local/include -I/usr/include -I/include"
 ## LIBRARY FLAGS ##
-export LDFLAGS="-L/usr/lib -L/usr/local/lib -L$DEV_LIB"
+export LDFLAGS="-L$DEV_LIB -L/usr/local/lib -L/usr/lib"
 
 export CC=clang
 export CXX=clang++

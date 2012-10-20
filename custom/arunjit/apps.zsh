@@ -10,6 +10,13 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+# Homebrew
+export HOMEBREW="/usr/local/homebrew"
+export PATH="$HOMEBREW/bin:$PATH"
+export CFLAGS="-I$HOMEBREW/include:$CFLAGS"
+export CPPFLAGS="-I$HOMEBREW/include:$CPPFLAGS"
+export LDFLAGS="-I$HOMEBREW/lib:$LDFLAGS"
+
 # # PHP
 # export PATH="${PATH}:/usr/lib/php/bin"
 #
