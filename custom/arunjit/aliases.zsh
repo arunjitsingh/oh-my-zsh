@@ -30,16 +30,15 @@ alias gvim="/Applications/Editors/MacVim.app/Contents/MacOS/Vim -g"
 alias rm="/usr/local/bin/safe-rm"
 
 ### Application aliases ###
-alias openssl="/usr/local/bin/openssl"
 
-alias erb="/usr/local/bin/erb"
-alias gem="/usr/local/bin/gem"
-alias irb="/usr/local/bin/irb"
-alias rake="/usr/local/bin/rake"
-alias rdoc="/usr/local/bin/rdoc"
-alias ri="/usr/local/bin/ri"
-alias ruby="/usr/local/bin/ruby"
-alias testrb="/usr/local/bin/testrb"
+# alias erb="/usr/local/bin/erb"
+# alias gem="/usr/local/bin/gem"
+# alias irb="/usr/local/bin/irb"
+# alias rake="/usr/local/bin/rake"
+# alias rdoc="/usr/local/bin/rdoc"
+# alias ri="/usr/local/bin/ri"
+# alias ruby="/usr/local/bin/ruby"
+# alias testrb="/usr/local/bin/testrb"
 
 alias stylus="stylus -I $DEV_SRC/stylus/ -u nib"
 
