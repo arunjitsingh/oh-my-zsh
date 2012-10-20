@@ -5,7 +5,7 @@
 # My Configuration
 
 ## ALIASES ##
-
+alias l="ls -lah"
 alias lg="ls -G1hl"
 alias ll="ls -G1lhaF"
 
@@ -17,8 +17,8 @@ alias duh="du -hd 1"
 alias edit="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
 alias mate='subl -w'
 
-alias imac="ssh harmitsingh@10.0.1.179"
-alias amu="ssh root@10.0.1.18"
+alias imac="ssh harmitsingh@10.0.0.41"
+alias amu="ssh root@10.0.0.18"
 
 alias killadobe='killall "AAM Updates Notifier"'
 
