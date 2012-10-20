@@ -37,6 +37,7 @@ export PATH="$DEV_BIN:$PATH"
 
 ## INCLUDE FLAGS ##
 export CPPFLAGS="-I$DEV_SRC -I/usr/local/include -I/usr/include -I/include"
+export CXXFLAGS=$CPPFLAGS
 ## LIBRARY FLAGS ##
 export LDFLAGS="-L$DEV_LIB -L/usr/local/lib -L/usr/lib"
 

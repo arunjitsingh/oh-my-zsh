@@ -15,6 +15,7 @@ export HOMEBREW="/usr/local/homebrew"
 export PATH="$HOMEBREW/bin:$PATH"
 export CFLAGS="-I$HOMEBREW/include $CFLAGS"
 export CPPFLAGS="-I$HOMEBREW/include $CPPFLAGS"
+export CXXFLAGS=$CPPFLAGS
 export LDFLAGS="-I$HOMEBREW/lib $LDFLAGS"
 
 # # PHP
