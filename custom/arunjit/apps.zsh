@@ -66,7 +66,7 @@ export PATH="$GOROOT/bin:$PATH"
 #export PATH="$DEV_SRC/go/bin:$DEV_SRC/experimental/go/bin:$PATH"
 
 # Setting PATH/PYTHONPATH for Python 2.7, 3.2
-export PYTHONPATH="$DEV_SRC/python:$DEV_SRC/ext/python:$BUILD_DEFS:$PYAE"
+export PYTHONPATH="${HOMEBREW}/lib/python2.7/site-packages:$DEV_SRC/python:$DEV_SRC/ext/python:$BUILD_DEFS:$PYAE"
 # Setting PATH for Python 3.2
 export PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:$PATH"
 # Setting PATH for Python 2.7
