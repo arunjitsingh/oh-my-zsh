@@ -78,12 +78,12 @@ alias gjslh="gjslint --check_html"
 #alias gclc="java -jar /usr/local/bin/closure-compiler.jar"
 
 # Google tools and depot_tools
-export PATH="$GOOG/bin:$GOOG/depot_tools:$PATH"
+#export PATH="$GOOG/bin:$GOOG/depot_tools:$PATH"
 
 # NACL
-export NACL_SDK_ROOT="$DEV_SDK/nacl"
-export NACL_VERSION="pepper_16"
-alias nacl_init="$NACL_SDK_ROOT/$NACL_VERSION/project_templates/init_project.py"
+#export NACL_SDK_ROOT="$DEV_SDK/nacl"
+#export NACL_VERSION="pepper_16"
+#alias nacl_init="$NACL_SDK_ROOT/$NACL_VERSION/project_templates/init_project.py"
 
 # GYP
 export GYP_GENERATORS=make
