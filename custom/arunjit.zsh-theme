@@ -9,7 +9,7 @@ _smiley () {
   if (( $prevret )); then
     echo -n "%{$bg[red]%}%{$fg[yellow]%} $prevret %{$reset_color%}"
   else
-    echo -n "%{$fg[green]%}☻%{$reset_color%}"
+    echo -n "%{$fg[green]%}\o/%{$reset_color%}"  # ☻
   fi
 }
 
@@ -26,7 +26,7 @@ _git_prompt () {
       state="%{$fg[green]%}"
     fi
     #echo "%{$fg[black]%}git:$state$(current_branch)%{$fg[black]%}@$(git rev-parse --short HEAD)%{$reset_color%} "
-    echo "%{$fg_bold[black]%}git:$state$(current_branch)%{$reset_color%} "
+    echo "$state$(current_branch)%{$reset_color%} "
   else
     echo ""
   fi
@@ -41,7 +41,6 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$bg[red]$fg[black]%} ⇜ %{$reset_color%}"
 ZSH_THEME_TERM_TITLE_IDLE='%c'
 ZSH_THEME_TERM_TAB_TITLE_IDLE='%c'
 
-#RPROMPT=' $(git_prompt_status) $(_smiley) ' # slows down the prompt
-export RPROMPT='$(_smiley) %{$fg[white]%}%D{%B %d (%A) %T}%{$reset_color%} '
-export PROMPT=' %{$fg_bold[black]%}%? #%! %n@%m:%~ %#
+export RPROMPT='$(_smiley)'
+export PROMPT=' %{$fg[black]%}#%! %n@%m %D{%Y-%m-%d %T}
  %{$fg[yellow]%}$(ajs_cwd_fix)%{$reset_color%} $(_git_prompt)%{$fg[blue]%}➜ %{$reset_color%}'
