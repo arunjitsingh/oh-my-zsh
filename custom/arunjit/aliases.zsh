@@ -15,7 +15,7 @@ alias cxx="clang++"
 alias duh="du -hd 1"
 
 alias edit="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
-alias mate='mate -w'
+# alias mate='mate -w'
 
 alias imac="ssh harmitsingh@10.0.0.41"
 alias amu="ssh root@10.0.0.18"
