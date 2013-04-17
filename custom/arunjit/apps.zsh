@@ -12,7 +12,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Homebrew
 export HOMEBREW="/usr/local/homebrew"
-export PATH="$HOMEBREW/bin:$PATH"
+export PATH="$HOMEBREW/sbin:$HOMEBREW/bin:$PATH"
 export CFLAGS="-I$HOMEBREW/include $CFLAGS"
 export CPPFLAGS="-I$HOMEBREW/include $CPPFLAGS"
 export CXXFLAGS=$CPPFLAGS
